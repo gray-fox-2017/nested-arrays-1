@@ -11,10 +11,14 @@ const makeChessboard = () => {
   let whiteChess = [];
   let blackPion = [];
   let whitePion = [];
+  let kosong = [];
 
   for (let i = 0; i < figure.length; i++) {
     blackChess.push(figure[i] + "Hitam");
     whiteChess.push(figure[i] + "Putih");
+    blackPion.push("Pion Hitam");
+    whitePion.push("Pion Putih");
+    kosong.push("Kosong");
   }
 
   for (let i = 0; i < 8; i++) {
@@ -27,14 +31,15 @@ const makeChessboard = () => {
     } else if (i === 7) {
       finalArr.push(whiteChess.reverse());
     } else {
-      finalArr.push("Kosong");
+      finalArr.push(kosong);
     }
   }
-  return chessboard
+  return finalArr;
 }
 
 const printBoard = x => {
   // ... write your code here
+  console.log(x);
 }
 
 printBoard(makeChessboard())
