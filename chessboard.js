@@ -51,9 +51,10 @@ const makeChessboard = () => {
 
 const printBoard = x => {
   // ... write your code here
+  console.log(x);
 }
-console.log(makeChessboard());
-//printBoard(makeChessboard())
+
+printBoard(makeChessboard())
 
 module.exports = {
   makeChessboard,
