@@ -18,7 +18,6 @@ function tic_tac_toe_board () {
     }
     board.push(baris);
   }
-
   return board;
 
 }
