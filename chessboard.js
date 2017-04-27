@@ -4,9 +4,7 @@ const makeChessboard = () => {
   let chessboard = []
 
   // ... write your code here
-  let tempArr = []
-  let finalArr = [];
-  let figure = ["Benteng ", "Kuda ", "Peluncur ", "Raja ", "Ratu ", "Peluncur ", "Kuda", "Benteng"];
+  let figure = ["Benteng ", "Kuda ", "Peluncur ", "Raja ", "Ratu ", "Peluncur ", "Kuda ", "Benteng "];
   let blackChess = [];
   let whiteChess = [];
   let blackPion = [];
@@ -23,18 +21,18 @@ const makeChessboard = () => {
 
   for (let i = 0; i < 8; i++) {
     if (i === 0) {
-      finalArr.push(blackChess);
+      chessboard.push(whiteChess);
     } else if (i === 1) {
-      finalArr.push(blackPion);
+      chessboard.push(blackPion);
     } else if (i === 6) {
-      finalArr.push(whitePion);
+      chessboard.push(whitePion);
     } else if (i === 7) {
-      finalArr.push(whiteChess.reverse());
+      chessboard.push(blackChess.reverse());
     } else {
-      finalArr.push(kosong);
+      chessboard.push(kosong);
     }
   }
-  return finalArr;
+  return chessboard;
 }
 
 const printBoard = x => {
@@ -42,7 +40,8 @@ const printBoard = x => {
   console.log(x);
 }
 
-printBoard(makeChessboard())
+printBoard(makeChessboard()[0][7])
+
 
 module.exports = {
   makeChessboard,
