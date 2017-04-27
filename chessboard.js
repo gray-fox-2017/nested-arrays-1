@@ -3,39 +3,55 @@
 const makeChessboard = () => {
   let chessboard = []
   let putItems = []
-  let kosong = ['']
+  let kosong = ['#','#','#','#','#','#','#','#']
   let items = ['Benteng','kuda','peluncur','raja','ratu','peluncur','kuda','Benteng']
   let warna = ['hitam','putih']
-  let pion = ['pion']
+  let pion = ['pion','pion','pion','pion','pion','pion','pion','pion']
 
+  //debugger
   // ... write your code here
-  for (let i = 0; i<8; i++) {
-    if (i === 0 || i === 7) {
-      putItems.push(items)
-    }
-    for (let j = 0; j<8; j++) {
-      if (j % 2 == 0) {
-        chessboard.push(warna[1]) //masukan warna putih
-        //console.log(chessboard)
-      } else {
-        chessboard.push(warna[0]) //masukan warna hitam
-        //console.log(chessboard)
-      }
 
-      if (i === 1 || i === 6) {
-        putItems.push(pion)
-      } else if (i === 2 || i === 3 || i === 4 || i === 5)  {
-        putItems.push(kosong)
-      }
+  for (let i = 0; i<8; i++) {
+    //put items on board
+    if (i === 0) { //nobble putih
+      let newItems = items.map(isiArray => {
+        return isiArray + ' putih'
+      })
+      putItems.push(newItems)
+    } else if (i === 1) { //pion putih
+      let newItems = pion.map(isiArray => {
+        return isiArray + ' putih'
+      })
+      putItems.push(newItems)
+    } else if (i === 2 || i === 3 || i === 4 || i === 5)  { //kosong
+      let newItems = kosong.map(isiArray => {
+        return isiArray
+      })
+      putItems.push(newItems)
+    } else if (i === 6) {
+      let newItems = pion.map(isiArray => {
+        return isiArray + ' hitam'
+      })
+      putItems.push(newItems)
+    } else if (i === 7) {
+      let newItems = items.map(isiArray => {
+        return isiArray + ' hitam'
+      })
+      putItems.push(newItems)
     }
+
   }
   //console.log(chessboard)
   console.log(putItems)
+  console.log(putItems[7][0] == 'Benteng hitam')
+  //console.log(c)
   return chessboard
 }
 
 const printBoard = x => {
   // ... write your code here
+
+  //return console.log(x)
 }
 
 printBoard(makeChessboard())
