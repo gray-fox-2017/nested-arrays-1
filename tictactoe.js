@@ -17,8 +17,6 @@ function tic_tac_toe_board () {
       else arr.push('X');
     }
   }
-
-
     for(let i=0;i<9;i+=3){
       board.push(arr.slice(i,i+3));
     }
