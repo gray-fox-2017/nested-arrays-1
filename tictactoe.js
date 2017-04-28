@@ -1,14 +1,4 @@
 function tic_tac_toe_board () {
-  let ticTac = []
-  for(let i = 0; i < 3; i++) {
-    ticTac[i] = [];
-    for(let j = 0; j < 3; j++) {
-      let acak = Math.round(Math.random());
-      if(acak == 0) ticTac[i].push('x');
-      if(acak == 1) ticTac[i].push('o');
-    }
-  }
-
   let ticTacRapi = []
   let hitungX = 0;
   let hitungO = 0;
