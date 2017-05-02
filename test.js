@@ -1,7 +1,7 @@
 const assert = require('assert')
 
 const { makeChessboard, printBoard } = require('./chessboard.js')
-const Spreadsheet = require('./spreadsheet.js')
+//const Spreadsheet = require('./spreadsheet.js')
 
 const chessboard = makeChessboard()
 describe('Chessboard Release 0', () => {
