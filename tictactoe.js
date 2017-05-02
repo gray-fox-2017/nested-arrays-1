@@ -1,28 +1,28 @@
 function tic_tac_toe_board () {
   let chooser = Math.ceil(Math.random()*2);
   let X = 0;
-  let Y = 0;
+  let O = 0;
   let tampung = [];
   let board = [];
   let stop = false;
 
   if (chooser === 1){
     X = 4;
-    Y = 5;
+    O = 5;
   } else if (chooser === 2){
     X = 5;
-    Y = 4;
+    O = 4;
   }
 
   while (stop === false){
-    let X_or_Y = Math.ceil(Math.random()*2);
-    if (X_or_Y === 1 && X > 0){
+    let X_or_O = Math.ceil(Math.random()*2);
+    if (X_or_O === 1 && X > 0){
       tampung.push("X");
       X--;
-    } else if (X_or_Y === 2 && Y > 0){
-      tampung.push("Y");
-      Y--;
-    } else if (X == 0 && Y == 0){
+    } else if (X_or_O === 2 && O > 0){
+      tampung.push("O");
+      O--;
+    } else if (X == 0 && O == 0){
       stop = true
     }
   }
