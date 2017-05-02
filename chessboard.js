@@ -26,10 +26,10 @@ const makeChessboard = () => {
     return chessboard
 }
 
-const printBoard = x => {
+const printBoard = board => {
   // ... write your code here
   for(let i = 0; i < 8 ; i++){
-    console.log(`${i+1} ${x[i].join(" |")}`)
+    console.log(`${i+1} ${board[i].join(" |")}`)
 
   }
 }
