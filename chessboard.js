@@ -42,16 +42,19 @@ const makeChessboard = () => {
 
   }
   //console.log(chessboard)
-  console.log(putItems)
-  console.log(putItems[7][0] == 'Benteng hitam')
+  // console.log(putItems)
+  // console.log(putItems[7][0] == 'Benteng hitam')
   //console.log(c)
-  return chessboard
+  return putItems
 }
 
 const printBoard = x => {
   // ... write your code here
 
-  //return console.log(x)
+  // console.log(x)
+  for (let i = 0; i < x.length; i++) {
+    console.log(x[i].join(' '));
+  }
 }
 
 printBoard(makeChessboard())
