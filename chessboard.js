@@ -15,26 +15,7 @@ const makeChessboard = () => {
       for(let j=0; j<baris_belakang.length; j++){
         chessboard[i].push('black pawn');
       }
-    }else if(i==2){
-      chessboard.push([]);
-      for(let j=0; j<baris_belakang.length; j++){
-        chessboard[i].push('space');
-      }
-    }else if(i==3){
-      chessboard.push([]);
-      for(let j=0; j<baris_belakang.length; j++){
-        chessboard[i].push('space');
-      }
-    }else if(i==4){
-      chessboard.push([]);
-      for(let j=0; j<baris_belakang.length; j++){
-        chessboard[i].push('space');
-      }
-    }else if(i==5){
-      chessboard.push([]);
-      for(let j=0; j<baris_belakang.length; j++){
-        chessboard[i].push('space');
-      }
+
     }else if(i==6){
       chessboard.push([]);
       for(let j=0; j<baris_belakang.length; j++){
@@ -45,13 +26,21 @@ const makeChessboard = () => {
       for(let j=0; j<baris_belakang.length; j++){
         chessboard[i].push('white '+baris_belakang[j]);
       }
+    }else {
+      chessboard.push([]);
+      for (let j = 0; j < baris_belakang.length; j++) {
+        chessboard[i].push('space');
+      }
     }
   }
   return chessboard;
 }
 
-const printBoard = x => {
-  console.log(x);
+const printBoard = board => {
+  // console.log(board);
+  for(let i=0; i<board.length; i++){
+    console.log(board[i].join(','))
+  }
 }
 
 printBoard(makeChessboard())
