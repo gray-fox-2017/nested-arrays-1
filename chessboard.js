@@ -53,7 +53,9 @@ const makeChessboard = () => {
 
 const printBoard = x => {
   // ... write your code here
-  console.log(x);
+  for (let k = 0; k < 8; k++) {
+    console.log(x[k].join(' '));
+  }
 }
 
 printBoard(makeChessboard())
